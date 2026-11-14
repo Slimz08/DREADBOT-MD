@@ -83,12 +83,12 @@ const commands = [
       const timestamp = messageTimestampMs(ctx.msg);
       const responseMs = timestamp === null ? null : Math.max(0, Date.now() - timestamp);
       await ctx.reply([
-        "╔═══〔 🏓 DREADBOT MD · PONG 〕═══✦",
-        "║ ◈ Status: " + (ctx.connectionOpen ? "Online 🟢" : "Connecting 🟡"),
-        "║ ◈ Response: " + (responseMs === null ? "Unavailable" : responseMs + " ms"),
-        "║ ◈ Uptime: " + formatDuration(process.uptime()),
-        "║ ◈ Version: " + ctx.config.version,
-        "╚══════════════════════════✦"
+        "┌──〔 🏓 DREADBOT MD · PONG 〕───✦",
+        "│ ✦ Status: " + (ctx.connectionOpen ? "Online 🟢" : "Connecting 🟡"),
+        "│ ✦ Response: " + (responseMs === null ? "Unavailable" : responseMs + " ms"),
+        "│ ✦ Uptime: " + formatDuration(process.uptime()),
+        "│ ✦ Version: " + ctx.config.version,
+        "└─────────────✦"
       ].join("\n"));
     }
   },
